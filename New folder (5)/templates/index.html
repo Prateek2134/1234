@@ -1,0 +1,82 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+AI Engine
+{% endblock pagetitle %}
+
+{% block body %}
+<div>
+    <div class="container">
+        <!-- For demo purpose -->
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍀AI Engine🍀</b></h1>
+                <p class="lead" style="font-weight: 500;color: black;">This App Will Help You To Detect Disease in RICE PLANT</p>
+            </div>
+        </div>
+        <!-- End -->
+        <div class="row ">
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+
+                    <h5><b>Why is it necessary to detect disease in Rice Plant ?</b></h5>
+                    <p>Without proper identification of the disease and the disease-causing agent.
+                        disease control measures can be a waste of time
+                        and money and can lead to further plant losses Proper disease diagnosis is therefore vital. Often, plant pathologists have to rely on symptoms for the identification of a disease problem</p>
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;"><img
+                        src="https://live.staticflickr.com/2876/13596682363_f72a824838_b.jpg "
+                        height="300" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden mb-4">
+                            <input type="file" id="actual-btn" hidden name="image" />
+                            <label for="actual-btn">Choose File</label>
+                            <span id="file-chosen">No file chosen</span>
+                        </div>
+
+                        <!-- End -->
+
+                        <h6 class="text-center mb-4 text-muted">
+                            Simply upload your leaf image and then see the magic of AI.
+                        </h6>
+
+                        <!-- Custom bootstrap upload file-->
+                        <center>
+                            <a class="mx-2"><button type="submit" class="btn btn-outline-success">Submit</button></a>
+                        </center>
+                    </form>
+                    <!-- End -->
+
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+                    <h5><b>Prevent Rice plant Disease follow below steps:</b></h5>
+                    <ol>
+                        <li>Use Healthy Seeds: Start with healthy seeds or seedlings from a reputable source. Healthy seeds have a better chance of resisting diseases.</li>
+                        <li>Crop Rotation: Rotate rice with other crops to break disease cycles and reduce the buildup of pathogens in the soil.</li>
+                        <li>Field Selection: Choose well-drained fields with good air circulation to reduce the risk of disease development.</li>
+                        <li>Weed Control: Keep fields weed-free to reduce competition for nutrients and minimize the spread of diseases carried by weeds.</li>
+                        <li>Sanitation: Remove and destroy infected plant debris to prevent the buildup of pathogens</li>
+                        </ol>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+
+{% endblock body %}

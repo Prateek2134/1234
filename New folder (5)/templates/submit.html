@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+{{title}}
+{% endblock pagetitle %}
+{% block body %}
+
+<div>
+  <div class="container">
+    <!-- For demo purpose -->
+    <div class="row mb-5 text-center text-white">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);""><b>{{title}}</b></h1>
+      </div>
+    </div>
+    <!-- <center>
+    <div class=" col">
+          <div class="p-3 bg-white shadow rounded-lg" style="width: 30%;">
+
+            <img src={{image_url}} width="350" height="350">
+
+          </div>
+      </div>
+      </center> -->
+      <center>
+      <br>
+      <div class=" row ">
+        <div class="col mx-auto">
+          <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+            <h1>Predicted Rice Plant Disease Type:</h1>
+            <h3><p5>{{pred}}</p5></h3>
+          </div>
+        </div>
+      </div>
+    </center>
+      <div class="row">
+        <div class="col mx-auto">
+          <div class="p-5 bg-white shadow rounded-lg" style="height:95%">
+            
+            <p>
+              {{recommendations}}
+            </p>
+          </div>
+        </div>
+    </div>
+
+
+    
+    <div class="col mx-auto"">
+        <div class=" p-5 bg-white shadow rounded-lg" style="height: 95%;">
+          <center>
+            
+          <h1>  SUGGESTION :  </h1>
+              {%if pred == "Bacterial_leaf_blightt"%}
+              <h4>When selecting pesticides for controlling Bacterial leaf blight disease in rice plants, it's important to choose products that effectively target the specific fungal pathogens causing the disease while minimizing environmental impact and potential harm to non-target organisms:</h4>  
+              <h4> 1. Flutriafol: Flutriafol is a triazole fungicide with systemic and preventive activity against fungal pathogens.</h4>  
+              <h4> 2. Isoprothiolane: Isoprothiolane is a protective fungicide with systemic properties that provides effective control of Leaf Blast when applied preventively.</h4>  
+              <h4> 3. Tebuconazole: Tebuconazole is a systemic triazole fungicide with preventive and curative properties.</h4>  
+              <h4> 4. Tricyclazole: Tricyclazole is a systemic fungicide specifically used for controlling rice diseases such as Leaf Blast.</h4>  
+                
+                  <a target="_blank" href=https://agribegri.com/products/buy-agriventure-try-cycle--powerful-fungicide-for-crop-protection.php>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product online </button></a>
+                    
+              
+              {%elif pred == "Brown_spot"%}
+      
+              <h4>When considering pesticides for controlling Brown Spot disease in rice plants, it's essential to select products that effectively target the specific fungal pathogens causing the disease while minimizing environmental impact and potential harm to non-target organisms:</h4>
+                <h4> 1. Tricyclazole: Tricyclazole is a protective fungicide specifically used for controlling rice diseases such as Brown Spot and Blast the suppression of disease symptoms.</h4>
+                  <h4> 2. Flutriafol: Flutriafol is a triazole fungicide with systemic and preventive activity against fungal pathogens.</h4>
+                    <h4> 3. Isoprothiolane: Isoprothiolane is a protective fungicide with systemic properties that provides effective control of Brown Spot when applied preventively.</h4>
+                      <h4> 4.Tebuconazole: Tebuconazole is a systemic triazole fungicide with preventive and curative properties.</h4>
+                  
+                  <a target="_blank" href=https://www.iffcobazar.in/en/product/kazashi-isoprothiolane-40-ec#kazashi-isoprothiolane-40-ec-1-liter>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>
+                 
+
+              {% elif pred == "Leaf_smut"%}
+              <h4>When it comes to controlling Leaf_smut disease in rice plants with pesticides, it's crucial to choose products that are effective against the specific fungal pathogens causing the disease while minimizing environmental impact and potential harm to non-target organisms. Here are some pesticide suggestions::</h4>
+                <h4>    1. Azoxystrobin: Azoxystrobin is a broad-spectrum systemic fungicide that effectively controls various fungal diseases, including Neck Blast.</h4>
+                  <h4>    2. Trifloxystrobin: Trifloxystrobin is another systemic fungicide that provides excellent control of Neck Blast and other rice diseases.</h4>
+                    <h4>    3. Propiconazole: Propiconazole is a systemic triazole fungicide that inhibits fungal sterol biosynthesis, leading to the death of the pathogen.</h4>
+                      <h4>    4. Tebuconazole: Tebuconazole is a triazole fungicide with systemic and curative properties. It controls a wide range of fungal diseases, including Neck Blast, by inhibiting ergosterol biosynthesis in the fungal cell membrane. .</h4>
+              
+                  <a target="_blank" href=https://agribegri.com/products/fmc-gezeko-tebuconazole-50--trifloxystobin-25-wg-fungicides.phphttps://agribegri.com/products/fmc-gezeko-tebuconazole-50--trifloxystobin-25-wg-fungicides.php>
+                    <button type="button" class="btn btn-success" style="background-color: #0a240d;">Buy Product</button></a>
+                
+                    {% elif pred == "Rice___Healthy"%}
+                    <h4> No Suggestion.. good keep itup</h4>
+                        
+              {%else%}
+              <h3>Please enter a valid skin type.</h3>    
+          <br>
+              {%endif%}
+              <a href='/'>go back to home page</a>
+            </center>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+
+<div>
+  <center>
+      <h2>Review Form</h2>
+      <form action="/submit222" method="post">
+          <label for="textfield">Enter your text here:</label><br>
+          <br>
+          <input type="text" id="textfield" name="textfield" style="width: 30ch;height: 5ch;">
+          <br><br>
+          <input type="submit" value="Submit">
+          <br><br>
+      </form>
+  </center>
+</div>
+  
+
+
+{% endblock body %}
