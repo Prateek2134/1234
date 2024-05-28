@@ -1,0 +1,73 @@
+<html>
+<head><link rel="stylesheet" href="{{url_for('static',filename='css/scheme.css')}}"></head>
+<body style="background-color:#F4C2C2;">
+    <center>
+        <h1>  PREDICTION :  </h1>
+        {%if skin_type == "Normal Skin"%}
+        <h1>For normal skin, you're lucky to have a well-balanced complexion. Your primary goal is to maintain your skin's health. Here's a comprehensive skincare routine:
+            1. Cleanser: Use a gentle, sulfate-free cleanser to remove impurities.
+            2. Moisturizer: Opt for a lightweight, non-comedogenic moisturizer.
+            3. Sunscreen: Apply a broad-spectrum sunscreen daily to protect your skin.
+            4. Optional: You can incorporate a mild exfoliant 1-2 times a week for extra glow.</h1>  
+        
+        {%elif skin_type == "Sensitive Skin"%}
+
+        <h1>Sensitive skin requires extra care to minimize irritation and redness. Consider these steps:
+            1. Cleanser: Use a fragrance-free, hypoallergenic cleanser.
+            2. Moisturizer: Choose a product with soothing ingredients like aloe vera or chamomile.
+            3. Sunscreen: Use a physical sunscreen with zinc oxide or titanium dioxide.
+            4. Avoid harsh exfoliants and strong active ingredients, and patch-test new products.</h1>
+
+        {%elif skin_type == "Sensitive Skin"%}
+        <h1></h1>
+
+        {%elif elif skin_type == "Dry Skin"%}
+        <h1>Dry skin needs intense hydration and protection. Follow this regimen:
+            1. Cleanser: Use a hydrating, gentle cleanser.
+            2. Moisturizer: Opt for a rich, creamy moisturizer with ingredients like hyaluronic acid or ceramides.
+            3. Sunscreen: Apply a broad-spectrum sunscreen daily to prevent further dryness.
+            4. Consider adding a hydrating serum or facial oil to your routine for added moisture.</h1>
+        
+        {%elif skin_type == "Oily Skin"%}
+        <h1>To control excess oil and minimize breakouts, follow these steps:
+            1. Cleanser: Use a foaming, salicylic acid-based cleanser to control oil.
+            2. Moisturizer: Choose an oil-free, lightweight, and non-comedogenic moisturizer.
+            3. Sunscreen: Use an oil-free, mattifying sunscreen.
+            4. Consider using products with ingredients like salicylic acid, niacinamide, or witch hazel to manage oil and acne.</h1>
+        
+        {%elif skin_type == "Scaly Skin"%}
+        <h1>Scaly skin often results from dryness and flakiness. Try these skincare steps:
+            1. Cleanser: Use a gentle exfoliating cleanser to remove dead skin cells.
+            2. Moisturizer: Choose a rich, emollient moisturizer to lock in moisture.
+            3. Sunscreen: Protect your skin from further damage with a daily sunscreen.
+            4. Exfoliate with products containing glycolic acid or lactic acid to improve texture.</h1>
+        
+        {%elif skin_type == "Red_Spots_skin"%}
+        <h1>Red spots can be due to various causes. Here's a general approach:
+            1. Cleanser: Use a gentle, fragrance-free cleanser to avoid irritation.
+            2. Moisturizer: Select a calming and hydrating moisturizer.
+            3. Sunscreen: Shield your skin from further damage with a broad-spectrum sunscreen.
+            4. Consult a dermatologist to identify the specific cause of redness and receive tailored treatment.</h1>
+        
+        {%elif skin_type == "Skin_moles"%}
+            <h1>Moles are usually harmless but require care. Follow these guidelines:
+                1. Sunscreen: Protect your skin with a broad-spectrum sunscreen to prevent sun damage.
+                2. Regularly examine your moles for any changes in size, shape, or color.
+                3. If you notice changes in a mole, consult a dermatologist for a thorough evaluation.
+                4. Avoid sun exposure, and consider wearing protective clothing and hats.</h1>    
+
+        {%else%}
+        <h1>Please enter a valid skin type.</h1>    
+    
+
+        {%endif%}
+        <a href='/'>go back to home page</a>
+
+    </center>
+</body>
+</html>
+
+
+
+
+
